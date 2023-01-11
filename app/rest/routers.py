@@ -1,8 +1,8 @@
 from fastapi import APIRouter
 
-hello = APIRouter()
+router = APIRouter()
 
 
-@hello.get('/hello/', tags=['hello'])
+@router.get('/', tags=['hello'])
 async def root():
     return {'hello': 'world!'}

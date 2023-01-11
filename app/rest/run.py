@@ -1,12 +1,7 @@
 from fastapi import FastAPI
 
-from .routers import hello
+from .routers import router
 
 
 app = FastAPI()
-app.include_router(hello)
-
-
-@app.get('/')
-async def asd():
-    return {'asd': '123'}
+app.include_router(router)
